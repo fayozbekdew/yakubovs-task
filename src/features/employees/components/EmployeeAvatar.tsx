@@ -3,8 +3,8 @@ import { initials } from '../../../lib/format'
 import type { Employee } from '../model'
 
 const PALETTE = [
-  'bg-[#dfe6d8] text-[#33503a]',
-  'bg-[#e8dfd0] text-[#6b4d22]',
+  'bg-accent-soft text-accent',
+  'bg-[#fff0e7] text-[#994216]',
   'bg-[#dbe2ea] text-[#33506d]',
   'bg-[#eadbd8] text-[#7a3b30]',
   'bg-[#e2dfe9] text-[#4c4170]',

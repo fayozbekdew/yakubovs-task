@@ -81,7 +81,7 @@ export function App() {
             <Settings2 size={17} /> Sozlamalar
           </button>
           <div className="mt-3 flex items-center gap-3 border-t border-white/10 px-2 pt-4">
-            <span className="text-accent grid size-9 place-items-center rounded-full bg-[#d9e6d8] text-xs font-semibold">
+            <span className="text-accent bg-accent-soft grid size-9 place-items-center rounded-full text-xs font-semibold">
               AK
             </span>
             <div className="min-w-0 flex-1">
@@ -109,9 +109,9 @@ export function App() {
               className="text-ink-2 hover:bg-sunken relative grid size-9 place-items-center rounded-lg transition"
             >
               <Bell size={17} />
-              <span className="bg-danger ring-surface absolute top-2 right-2 size-1.5 rounded-full ring-2" />
+              <span className="bg-brand-orange ring-surface absolute top-2 right-2 size-1.5 rounded-full ring-2" />
             </button>
-            <span className="text-accent grid size-8 place-items-center rounded-full bg-[#d9e6d8] text-[11px] font-semibold lg:hidden">
+            <span className="text-accent bg-accent-soft grid size-8 place-items-center rounded-full text-[11px] font-semibold lg:hidden">
               AK
             </span>
           </div>
