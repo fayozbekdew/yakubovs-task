@@ -20,18 +20,20 @@ export function SummaryStrip() {
   ]
 
   return (
-    <dl className="border-line grid grid-cols-2 border-y lg:grid-cols-4">
+    <dl className="grid grid-cols-2 gap-3 lg:grid-cols-4">
       {metrics.map((metric) => (
         <div
           key={metric.label}
-          className="border-line px-4 py-4 not-first:border-l max-lg:nth-3:border-l-0 max-lg:nth-[n+3]:border-t sm:px-6"
+          className="border-line bg-surface min-w-0 rounded-xl border px-4 py-4 shadow-[0_1px_2px_rgb(20_30_20/0.03)] sm:px-5 sm:py-5"
         >
           <dt className="text-ink-3 text-xs">{metric.label}</dt>
           <dd className="mt-1.5 flex items-baseline gap-1.5">
             {metric.value === undefined && !isError ? (
               <span className="bg-sunken h-7 w-16 animate-pulse rounded-sm" />
             ) : (
-              <span className="font-mono text-2xl tracking-tight">{metric.value ?? '—'}</span>
+              <span className="font-mono text-[26px] font-medium tracking-tight tabular-nums">
+                {metric.value ?? '—'}
+              </span>
             )}
             {metric.note && data && <span className="text-ink-3 text-xs">{metric.note}</span>}
           </dd>

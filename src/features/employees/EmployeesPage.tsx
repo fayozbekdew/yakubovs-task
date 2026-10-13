@@ -88,11 +88,11 @@ export function EmployeesPage() {
   }
 
   return (
-    <div className="mx-auto max-w-[1440px]">
-      <header className="flex flex-wrap items-end justify-between gap-4 px-4 pt-6 pb-5 sm:px-6 lg:pt-8">
+    <div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8">
+      <header className="flex flex-wrap items-end justify-between gap-4 pt-7 pb-5 lg:pt-9">
         <div>
-          <p className="text-ink-3 font-mono text-[11px] tracking-wider uppercase">Kadrlar / Ro'yxat</p>
-          <h1 className="mt-1 text-2xl font-semibold tracking-tight">Xodimlar</h1>
+          <p className="text-ink-3 text-xs">Jamoangiz va kadrlar ma'lumotlarini boshqaring</p>
+          <h1 className="mt-1.5 text-[27px] font-semibold tracking-tight">Xodimlar</h1>
         </div>
         <Button variant="primary" onClick={createEmployee}>
           <Plus size={16} />
@@ -102,7 +102,14 @@ export function EmployeesPage() {
 
       <SummaryStrip />
 
-      <section className="border-line bg-surface mt-6 border-y sm:mx-6 sm:border-x">
+      <section className="border-line bg-surface mt-6 overflow-hidden rounded-xl border shadow-[0_2px_8px_rgb(20_30_20/0.035)]">
+        <div className="border-line flex flex-wrap items-center justify-between gap-2 border-b px-4 pt-4 sm:px-5">
+          <div className="pb-2">
+            <h2 className="text-sm font-semibold">Barcha xodimlar</h2>
+            <p className="text-ink-3 mt-1 text-[11px]">Xodimlar ro'yxati va ularning ish ma'lumotlari</p>
+          </div>
+          <span className="text-ink-3 pb-2 text-[11px]">{data ? `Jami: ${data.total} ta` : 'Yuklanmoqda…'}</span>
+        </div>
         <div className="border-line border-b">
           <StatusTabs value={filters.status} counts={data?.counts} onChange={(status) => applyFilters({ status })} />
         </div>
